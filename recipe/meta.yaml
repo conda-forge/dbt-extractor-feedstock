@@ -1,5 +1,5 @@
 {% set name = "dbt-extractor" %}
-{% set version = "0.4.0" %}
+{% set version = "0.4.1" %}
 
 
 package:
@@ -8,11 +8,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/dbt_extractor-{{ version }}.tar.gz
-  sha256: 58672e36fab988c849a693405920ee18421f27245c48e5f9ecf496369ed31a85
+  sha256: 75b1c665699ec0f1ffce1ba3d776f7dfce802156f22e70a7b9c8f0b4d7e80f42
 
 build:
   skip: true  # [py<36]
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
